@@ -1,0 +1,32 @@
+<NoTopBar></NoTopBar>
+
+<ScrollView class="page">
+  <GridLayout rows="auto, *">
+    <Header [search]="search"></Header>
+
+    <StackLayout row="1" class="page__content">
+      <Label text="My appointments" class="page__title"></Label>
+
+      <Label text="Upcoming" class="page__subtitle"></Label>
+
+      @for (appointment of appointmentsUpcoming$ | async; let index = $index; track appointment.id + index; let last =
+      $last) {
+      <Appointment [appointment]="appointment" [last]="last" />
+      }
+
+      <Label text="Past" class="page__subtitle"></Label>
+
+      @for (appointment of appointmentsPast$ | async; let index = $index; track appointment.id + index; let last =
+      $last) {
+      <Appointment [appointment]="appointment" [last]="last" attended="true" />
+      }
+    </StackLayout>
+  </GridLayout>
+</ScrollView>
+<DockLayout stretchLastChild="false" class="dock">
+  <FlexboxLayout dock="bottom" justifyContent="flex-end">
+    <Label text="bottom" width="40" height="40"></Label>
+
+    <Button type="submit" text="+" (tap)="add()" class="dock__button"></Button>
+  </FlexboxLayout>
+</DockLayout>

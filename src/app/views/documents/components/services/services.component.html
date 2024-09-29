@@ -1,0 +1,7 @@
+@for (service of services; track service.id) {
+<FlexboxLayout justifyContent="space-between">
+  <Routine [service]="service"></Routine>
+
+  <Label [text]="service.value | currency : 'MDL' : undefined : undefined : 'en-eu'"></Label>
+</FlexboxLayout>
+}

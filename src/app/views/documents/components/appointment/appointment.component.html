@@ -1,0 +1,18 @@
+<StackLayout>
+  <FlexboxLayout alignItems="flex-start">
+    <StackLayout class="time">
+      <FlexboxLayout class="time__dot" alignItems="center" justifyContent="center">
+        @if (attended) {
+        <ContentView class="time__dot-inside" />
+        }
+      </FlexboxLayout>
+
+      @if (!last) {
+      <ContentView class="time__line" />
+      }
+    </StackLayout>
+    <StackLayout class="details">
+      <Label [text]="document.type + ' - ' + document.analysisReason" class="details__date"></Label>
+    </StackLayout>
+  </FlexboxLayout>
+</StackLayout>

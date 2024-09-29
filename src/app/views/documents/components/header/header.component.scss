@@ -1,0 +1,91 @@
+.header {
+  background: linear-gradient(0deg, rgb(30 58 138 / 100%) 0%, rgb(37 99 235 / 100%) 52%, rgb(59 130 246 / 100%) 100%);
+
+  @apply
+    p-4
+    text-base
+    rounded-b-[50px];
+
+  &__avatar {
+    @apply
+      shrink-0
+      rounded-full
+      object-cover
+      w-32
+      h-32
+      mr-4;
+  }
+
+  &__details {
+    @apply
+      justify-between
+      w-full;
+  }
+
+
+  &__date {
+    @apply
+      text-2xl
+      font-bold;
+  }
+}
+
+.name {
+  &__message {
+    @apply
+      leading-3
+      text-xs;
+  }
+
+  &__user {
+    @apply
+      leading-3;
+  }
+}
+
+.ai {
+  @apply
+    my-16
+    text-base;
+
+  &__title {
+    @apply
+      mb-5
+      text-center
+      text-xl
+      font-bold;
+  }
+
+  &__brand {
+    @apply
+      mt-5
+      justify-end;
+  }
+
+  &__logo {
+    @apply
+      w-14
+      h-14
+      mr-4;
+  }
+
+  &__text {
+    @apply
+      text-sm
+      font-bold;
+  }
+}
+
+.search {
+  @apply
+    mb-2
+    bg-white
+    rounded-[50px];
+
+  &__input {
+    @apply
+      text-slate-900
+      text-base
+      border-b-0;
+  }
+}

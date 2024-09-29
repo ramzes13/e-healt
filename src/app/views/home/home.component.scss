@@ -1,0 +1,39 @@
+.page {
+  @apply
+    bg-white
+    bg-cover
+    bg-top;
+
+  /* bg-[url('~/assets/bg.png')] */
+
+  &__content {
+    @apply
+      p-10
+      text-slate-900;
+  }
+
+  &__title {
+    @apply
+      text-2xl
+      font-semibold;
+  }
+
+  &__subtitle {
+    @apply
+      my-8
+      text-base
+      font-semibold;
+  }
+}
+
+.dock {
+  &__button {
+    @apply
+      m-10
+      w-44
+      h-44
+      text-4xl
+      rounded-full
+      bg-blue-500;
+  }
+}

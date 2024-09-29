@@ -1,0 +1,22 @@
+<StackLayout>
+  <FlexboxLayout alignItems="flex-start">
+    <StackLayout class="time">
+      <FlexboxLayout class="time__dot" alignItems="center" justifyContent="center">
+        @if (attended) {
+        <ContentView class="time__dot-inside" />
+        }
+      </FlexboxLayout>
+
+      @if (!last) {
+      <ContentView class="time__line" />
+      }
+    </StackLayout>
+    <StackLayout class="details">
+      <Label [text]="appointment.start | date : 'medium' : undefined : 'en-eu'" class="details__date"></Label>
+
+      @if (services$ | async; as services) {
+      <Services [services]="services" class="details__services"></Services>
+      }
+    </StackLayout>
+  </FlexboxLayout>
+</StackLayout>

@@ -1,0 +1,52 @@
+.time {
+  @apply
+    shrink-0;
+
+  &__dot {
+    @apply
+      w-20
+      h-20
+      bg-white
+      border-4
+      border-blue-500
+      rounded-full;
+  }
+
+  &__dot-inside {
+    @apply
+      w-14
+      h-14
+      bg-blue-500
+      rounded-full;
+  }
+
+  &__line {
+    @apply
+      w-1
+      h-32
+      my-2
+      bg-blue-500;
+  }
+}
+
+
+.details {
+  @apply
+    w-full
+    pr-8
+    ml-4;
+
+  &__date {
+    @apply
+      mt-3
+      text-xs
+      text-gray-500;
+  }
+
+  &__services {
+    @apply
+      text-sm
+      font-bold
+      text-gray-900;
+  }
+}

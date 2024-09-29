@@ -1,0 +1,9 @@
+<TopBar></TopBar>
+
+<GridLayout class="page__content">
+  <StackLayout [formGroup]="form">
+    <TextField hint="Username" formControlName="email" />
+    <TextField hint="Password" formControlName="password" />
+    <Button type="submit" text="Login" (tap)="login()"></Button>
+  </StackLayout>
+</GridLayout>

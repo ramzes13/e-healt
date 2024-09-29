@@ -1,0 +1,8 @@
+coverage
+.vscode
+.history
+node_modules
+e2e
+dist
+projects/worldline-template/src/index.html
+projects/worldline-template/src/light.html
